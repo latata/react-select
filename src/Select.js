@@ -1102,6 +1102,7 @@ class Select extends React.Component {
 
 		return (
 			<div ref={ref => this.menuContainer = ref} className="Select-menu-outer" style={this.props.menuContainerStyle}>
+				{this.props.menuHeader}
 				<div
 					className="Select-menu"
 					id={`${this._instancePrefix}-list`}
@@ -1114,6 +1115,7 @@ class Select extends React.Component {
 				>
 					{menu}
 				</div>
+				{this.props.menuFooter}
 			</div>
 		);
 	}
@@ -1224,6 +1226,8 @@ Select.propTypes = {
 	matchProp: PropTypes.string,          // (any|label|value) which option property to filter on
 	menuBuffer: PropTypes.number,         // optional buffer (in px) between the bottom of the viewport and the bottom of the menu
 	menuContainerStyle: PropTypes.object, // optional style to apply to the menu container
+	menuFooter: PropTypes.func,
+	menuHeader: PropTypes.func,
 	menuRenderer: PropTypes.func,         // renders a custom menu with options
 	menuStyle: PropTypes.object,          // optional style to apply to the menu
 	multi: PropTypes.bool,                // multi-value input

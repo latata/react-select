@@ -1808,6 +1808,7 @@ var Select$1 = function (_React$Component) {
 				{ ref: function ref(_ref5) {
 						return _this8.menuContainer = _ref5;
 					}, className: 'Select-menu-outer', style: this.props.menuContainerStyle },
+				this.props.menuHeader,
 				React.createElement(
 					'div',
 					{
@@ -1823,7 +1824,8 @@ var Select$1 = function (_React$Component) {
 						tabIndex: -1
 					},
 					menu
-				)
+				),
+				this.props.menuFooter
 			);
 		}
 	}, {
@@ -1941,6 +1943,8 @@ Select$1.propTypes = {
 	matchProp: PropTypes.string, // (any|label|value) which option property to filter on
 	menuBuffer: PropTypes.number, // optional buffer (in px) between the bottom of the viewport and the bottom of the menu
 	menuContainerStyle: PropTypes.object, // optional style to apply to the menu container
+	menuFooter: PropTypes.func,
+	menuHeader: PropTypes.func,
 	menuRenderer: PropTypes.func, // renders a custom menu with options
 	menuStyle: PropTypes.object, // optional style to apply to the menu
 	multi: PropTypes.bool, // multi-value input
