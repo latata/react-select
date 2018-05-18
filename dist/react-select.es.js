@@ -1943,8 +1943,8 @@ Select$1.propTypes = {
 	matchProp: PropTypes.string, // (any|label|value) which option property to filter on
 	menuBuffer: PropTypes.number, // optional buffer (in px) between the bottom of the viewport and the bottom of the menu
 	menuContainerStyle: PropTypes.object, // optional style to apply to the menu container
-	menuFooter: PropTypes.func,
-	menuHeader: PropTypes.func,
+	menuFooter: PropTypes.object,
+	menuHeader: PropTypes.object,
 	menuRenderer: PropTypes.func, // renders a custom menu with options
 	menuStyle: PropTypes.object, // optional style to apply to the menu
 	multi: PropTypes.bool, // multi-value input
