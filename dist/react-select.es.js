@@ -1807,14 +1807,13 @@ var Select$1 = function (_React$Component) {
 				'div',
 				{ ref: function ref(_ref5) {
 						return _this8.menuContainer = _ref5;
-					}, className: 'Select-menu-outer', style: this.props.menuContainerStyle },
+					}, className: 'Select-menu-outer', style: this.props.menuContainerStyle, onMouseDown: this.handleMouseDownOnMenu },
 				this.props.menuHeader,
 				React.createElement(
 					'div',
 					{
 						className: 'Select-menu',
 						id: this._instancePrefix + '-list',
-						onMouseDown: this.handleMouseDownOnMenu,
 						onScroll: this.handleMenuScroll,
 						ref: function ref(_ref4) {
 							return _this8.menu = _ref4;

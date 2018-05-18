@@ -1101,12 +1101,11 @@ class Select extends React.Component {
 		}
 
 		return (
-			<div ref={ref => this.menuContainer = ref} className="Select-menu-outer" style={this.props.menuContainerStyle}>
+			<div ref={ref => this.menuContainer = ref} className="Select-menu-outer" style={this.props.menuContainerStyle} onMouseDown={this.handleMouseDownOnMenu}>
 				{this.props.menuHeader}
 				<div
 					className="Select-menu"
 					id={`${this._instancePrefix}-list`}
-					onMouseDown={this.handleMouseDownOnMenu}
 					onScroll={this.handleMenuScroll}
 					ref={ref => this.menu = ref}
 					role="listbox"
