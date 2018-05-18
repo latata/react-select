@@ -404,7 +404,7 @@ class Select extends React.Component {
 
 	handleInputBlur (event) {
 		// The check for menu.contains(activeElement) is necessary to prevent IE11's scrollbar from closing the menu in certain contexts.
-		if (this.menu && (this.menu === document.activeElement || this.menu.contains(document.activeElement))) {
+		if (this.menu && (this.menu === document.activeElement || this.menu.contains(document.activeElement) || this.menuContainer.contains(event.relatedTarget))) {
 			this.focus();
 			return;
 		}
